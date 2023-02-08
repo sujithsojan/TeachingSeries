@@ -1,0 +1,24 @@
+<div class="calculator">
+  <input type="text" [(ngModel)]="expression" disabled />
+  <br />
+  <br />
+  <button (click)="appendExpression('1')">1</button>
+  <button (click)="appendExpression('2')">2</button>
+  <button (click)="appendExpression('3')">3</button>
+  <button (click)="appendExpression('+')">+</button>
+  <br />
+  <button (click)="appendExpression('4')">4</button>
+  <button (click)="appendExpression('5')">5</button>
+  <button (click)="appendExpression('6')">6</button>
+  <button (click)="appendExpression('-')">-</button>
+  <br />
+  <button (click)="appendExpression('7')">7</button>
+  <button (click)="appendExpression('8')">8</button>
+  <button (click)="appendExpression('9')">9</button>
+  <button (click)="appendExpression('*')">*</button>
+  <br />
+  <button (click)="appendExpression('0')">0</button>
+  <button (click)="evaluateExpression()">=</button>
+  <button (click)="appendExpression('/')">/</button>
+</div>
+
