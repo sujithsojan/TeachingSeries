@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { PersonsService } from '../persons/persons.service';
 
 @Component({
   selector: 'app-persons-input',
@@ -6,13 +7,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./persons-input.component.css']
 })
 export class PersonsInputComponent {
-  constructor() { }
-  @Output() personCreate = new EventEmitter<string>();
+  constructor(private prsService: PersonsService) {  }
   enteredPersonName = '';
 
   onCreateUser() {
-  this.personCreate.emit(this.enteredPersonName);
+    this.prsService.addPerson(this.enteredPersonName);
   this.enteredPersonName = '';
+
   }
 
 }
